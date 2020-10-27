@@ -1,0 +1,18 @@
+import re
+t=int(input())
+while(t>0):
+    s=input()
+    x=re.findall('AA+',s)
+    y=re.findall('BB+',s)
+    count1=0
+    count2=0
+    if len(x)>0:
+        for i in range(len(x)):
+            n=len(x[i])
+            count1 +=(n-1)
+    if len(y)>0:
+        for i in range(len(y)):
+            m=len(y[i])
+            count2 +=(m-1)
+    print(count1+count2)
+    t -=1
